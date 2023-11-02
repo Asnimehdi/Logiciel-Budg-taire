@@ -1,0 +1,41 @@
+
+/////////////Selection info libelle de op///////////////////////
+SELECT Distinct t.Libelle, t.Information
+FROM principlal_csv_zip p
+INNER JOIN test2_csv_zip t 
+ON p.Article = t.Article 
+WHERE p.Operation = '25092';
+
+/////////////////////////change col//////////////////////////////
+ALTER TABLE principal_csv_zip
+CHANGE `Année` `Année` VARCHAR(255),
+CHANGE `Etape` `Etape` VARCHAR(255),
+CHANGE `Section` `Section` VARCHAR(255),
+CHANGE `Nature` `Nature` VARCHAR(255),
+CHANGE `NumBUDG` `NumBUDG` VARCHAR(255),
+CHANGE `Operation` `Operation` VARCHAR(255),
+CHANGE `Chapitre` `Chapitre` VARCHAR(255),
+CHANGE `Article` `Article` VARCHAR(255),
+CHANGE `Fonction` `Fonction` VARCHAR(255),
+CHANGE `Direction` `Direction` VARCHAR(255),
+CHANGE `Statut` `Statut` VARCHAR(255),
+CHANGE `Montant` `Montant` DECIMAL(10, 2),
+CHANGE `CodeEnveloppe` `CodeEnveloppe` VARCHAR(255),
+CHANGE `MillesimesaisieAP` `MillesimesaisieAP` VARCHAR(255),
+CHANGE `EtapeVote` `EtapeVote` VARCHAR(255),
+CHANGE `PhasageAP` `PhasageAP` VARCHAR(255),
+CHANGE `Politique` `Politique` VARCHAR(255);
+
+
+//////////////////////////////LOGIN USER/////////////////////////////////
+CREATE TABLE utilisateurs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL,
+    numero_direction INT
+);
+
+/////////////////////////Gen USER////////////////////////////////
+INSERT INTO utilisateurs (email, mot_de_passe, numero_direction) VALUES ('utilisateur@example.com', 'motdepasse123', '01');
+//////////////////////////Gen USER md5/////////////////////////
+INSERT INTO utilisateurs (email, mot_de_passe, numero_direction,nom,prenom) VALUES ('test', MD5('motdepasse'), '01','nom','prenom');
