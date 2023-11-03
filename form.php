@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
     <title>Recherche d'Opération</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="rechercher.js"></script>
 </head>
 
 <body>
@@ -16,8 +19,9 @@
             <a href="https://www.cotedor.fr/">  <img src="logo.png" alt="Logo" ></a>
             </div>
             <ul>
-                <li><a href="acceuil.php">Accueil</a></li>
+            <li><a href="acceuil.php">Accueil</a></li>
                 <li><a href="form.php">Recherche d'Opération</a></li>
+                <li><a href="#">Mes demandes</a></li>
                 <li><a href="profile.php">Profil</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
@@ -41,7 +45,15 @@
             <input type="text" name="operation" required>
             <input type="submit" value="Rechercher">
         </form>
+        <h3>Recherche de Libellé</h3>
+<form id="libelleForm" method="post">
+    <label for="libelle">Libellé :</label>
+    <input type="text" id="libelle" name="libelle" required>
+    
+</form>
+<div id="resultats"></div>
     </div>
+ 
     <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer le numéro d'opération à partir du formulaire
@@ -62,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Requête SQL pour récupérer les données
     $sql = "SELECT DISTINCT t.Libelle, t.Information
-            FROM principlal_csv_zip p
+            FROM database_csv_zip p
             INNER JOIN test2_csv_zip t ON p.Article = t.Article 
             WHERE p.Operation = '$operation'";
 
@@ -79,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "</ul>";
         echo "</div>";
     } else {
-        echo "<h2 class='no-result'>Aucun résultat trouvé pour l'opération numéro: $operation</h2>";
+        echo "<h3 class='no-result'>Aucun résultat trouvé pour l'opération numéro: $operation</h3>";
     }
 
     // Fermer la connexion
@@ -89,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Mon Application. Tous droits réservés.</p>
+            <p>&copy; 2023 Conseil Départemental de la cote d'or. Tous droits réservés.</p>
         </div>
     </footer>
 </body>

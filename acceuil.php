@@ -47,7 +47,7 @@
 
     <section class="features">
         <div class="container">
-            <h2>Fonctionnalités Clés</h2>
+            <h3>Fonctionnalités Clés</h2>
             <div class="feature">
                 <!-- Contenu de votre première fonctionnalité -->
             </div>
@@ -62,7 +62,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Mon Application. Tous droits réservés.</p>
+            <p>&copy; 2023 Conseil Départemental de la cote d'or. Tous droits réservés.</p>
         </div>
     </footer>
 

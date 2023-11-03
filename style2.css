@@ -69,7 +69,6 @@ form input[type="submit"]:hover {
     color: #fff;
     font-size: 24px;
     padding: 10px 0px;
-    
 }
 
 
@@ -187,8 +186,7 @@ tr:hover {
 .logo {
     display: flex;
     align-items: center;
-   
-    margin-left:  120%;
+   margin-left:  120%;
 }
 
 .logo img {
@@ -215,3 +213,53 @@ tr:hover {
 .no-result {
     color: #ff0000;
 }
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Style pour les options de la liste déroulante */
+select option {
+    background-color: white;
+    color: #333;
+}
+
+/* Style au survol de la liste déroulante */
+select:hover {
+    border-color: #555;
+}
+
+/* Style au focus de la liste déroulante */
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-list li {
+    margin-bottom: 10px;
+}
+
+.no-result {
+    color: #ff0000;
+}
+

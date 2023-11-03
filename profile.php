@@ -25,8 +25,9 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
             <a href="https://www.cotedor.fr/">  <img src="logo.png" alt="Logo" ></a>
             </div>
             <ul>
-                <li><a href="acceuil.php">Accueil</a></li>
+            <li><a href="acceuil.php">Accueil</a></li>
                 <li><a href="form.php">Recherche d'Opération</a></li>
+                <li><a href="#">Mes demandes</a></li>
                 <li><a href="profile.php">Profil</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
@@ -56,7 +57,7 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
                 <td><?php echo $_SESSION['prenom']; ?></td>
             </tr>
             <tr>
-                <th>direction</th>
+                <th>Direction</th>
                 <td><?php echo $_SESSION['direction']; ?></td>
             </tr>
           
@@ -65,7 +66,7 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
     </div>
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Mon Application. Tous droits réservés.</p>
+            <p>&copy; 2023 Conseil Départemental de la cote d'or. Tous droits réservés.</p>
         </div>
     </footer>
 </body>

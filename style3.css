@@ -1,0 +1,31 @@
+select {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 85px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Style pour les options de la liste déroulante */
+select option {
+    background-color: white;
+    color: #333;
+}
+
+/* Style au survol de la liste déroulante */
+select:hover {
+    border-color: #555;
+}
+
+/* Style au focus de la liste déroulante */
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
