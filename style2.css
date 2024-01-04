@@ -1,187 +1,316 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('back2.jpg');
-    background-size: cover;
-   background-position: center;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #dae2f8, #ffe056); /* Un dégradé doux */
+ 
 }
 
-.container {
-    max-width: 960px;
+
+.container1 {
+    width:1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 5px;
+}
+.container {
+    width: 90%; /* Prend 90% de la largeur de l'écran */
+    max-width: 1600px; /* Augmentez la largeur maximale pour les grands écrans */
+    margin: auto; /* Garde le conteneur centré avec de l'espace en haut et en bas */
+    padding: 20px ; /* Maintient un espacement intérieur confortable */
+    background-color: #ffffff; /* Fond blanc pour une apparence propre et professionnelle */
+    border-radius: 8px; /* Bordures légèrement arrondies pour une esthétique moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Ombre subtile pour la profondeur */
+    overflow: hidden; /* S'assure que le contenu ne déborde pas */
 }
 
 
 h1 {
-    font-family: 'Arial', sans-serif; /* Police de caractères */
-    font-size: 36px; /* Taille du texte */
-    color: white; /* Couleur du texte (noir dans cet exemple) */
-    text-align: center; /* Alignement du texte au centre */
-    margin-top: 10px;
-    margin-bottom: 30px; /* Marge en bas du titre */
-    text-transform: uppercase; /* Convertit le texte en majuscules */
-    letter-spacing: 2px; /* Espacement entre les caractères */
-}
-h2{
- text-align: right;
- font-size: 25px; 
- margin-bottom: -1%;
-}
-form input[type="text"] {
-    width: 80%;
-    padding: 10px;
+    font-family: 'Poppins', sans-serif; /* Une police moderne et épurée */
+    font-size: 48px; /* Augmente la taille pour plus d'impact */
+    color: #fbf0f0; /* Couleur de texte plus moderne et douce */
+    text-align: center;
     margin-top: 20px;
-    font-size: 16px;
-    border-color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Espacement légèrement augmenté pour un style épuré */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour de la profondeur */
 }
-input {
-    display: block;
-    width: 93%;
-    margin: auto;
-    padding: 13px;
-    border: 0;
-    border-radius: 20px;
-    font-family: "Roboto",sans-serif;
-    opacity: 0.60;
-	color: #333;
-    border-color: #333;
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px; /* Taille légèrement plus grande */
+    color: #fcf9f9; /* Couleur adoucie pour une hiérarchie visuelle */
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espacement ajusté */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-form input[type="submit"] {
-    width: 40%;
-    background-color: #333;
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px; /* Taille standard pour les sous-titres */
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color:#46607a; /* Couleur de fond bleue moderne */
+    padding: 15px; /* Padding un peu plus généreux */
+    border-radius: 5px; /* Bordure arrondie pour rester moderne */
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Ombre pour le contraste */
+}
+
+/* Style des étiquettes pour une meilleure lisibilité */
+form label {
+    display: block; /* Affiche chaque label sur une nouvelle ligne */
+    margin-top: 15px; /* Espace au-dessus de chaque label */
+    margin-bottom: 5px; /* Espace en dessous de chaque label avant le champ de saisie */
+    font-size: 16px; /* Taille de police adaptée pour une bonne lisibilité */
+    color: #333333; /* Couleur foncée pour une bonne visibilité sur fond clair */
+    font-family: 'Roboto', sans-serif; /* Utilisation d'une police moderne et lisible */
+    letter-spacing: 0.5px; /* Légère espacement entre les caractères pour une meilleure lisibilité */
+    text-transform: capitalize; /* La première lettre de chaque mot en majuscule */
+    font-weight: bold;
+}
+
+
+/* Style uniforme pour tous les champs de saisie de texte, email, password, et les champs de sélection et de date */
+form input[type="text"],
+form select, form input[type="date"] {
+    width: 80%; /* Utilise toute la largeur disponible - padding */
+    padding: 13px; /* Espacement intérieur confortable */
+    margin-top: 10px; /* Espace au-dessus de chaque champ */
+    margin-bottom: 20px; /* Espace en dessous de chaque champ */
+    font-size: 18px; /* Taille de police plus grande pour une meilleure lisibilité */
+    border: 1px solid #ccc; /* Bordure subtile */
+    border-radius: 8px; /* Coins arrondis pour un look moderne */
+    font-family: 'Roboto', sans-serif; /* Police cohérente et moderne */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour de la profondeur */
+    transition: border-color 0.2s, box-shadow 0.2s; /* Transition douce pour l'interaction */
+    color: #333; /* Couleur de texte standard */
+    appearance: none; /* Désactiver les styles par défaut du navigateur */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Style pour le focus des champs pour améliorer l'expérience utilisateur */
+form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus,
+form select:focus, form input[type="date"]:focus {
+    border-color: #007bff; /* Bleu pour indiquer l'activité */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Effet de glow pour le focus */
+}
+
+/* Style des boutons pour une action claire et attrayante */
+.cta-button, form input[type="submit"] {
+    width: auto; /* Taille automatique selon le contenu */
+    padding: 15px 30px; /* Padding généreux pour un bouton plus engageant */
+    background-color: #007bff; /* Bleu vif pour une action claire */
     color: white;
     border: none;
-    padding: 15px 20px;
     margin-top: 20px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 18px;
+    border-radius: 8px; /* Coins arrondis pour le bouton */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour le bouton */
+    transition: background-color 0.2s, box-shadow 0.2s; /* Transition pour l'interaction */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-form input[type="submit"]:hover {
-    background-color: #585858;
+/* Effet de survol pour le bouton */
+.cta-button:hover, form input[type="submit"]:hover,
+.cta-button:focus, form input[type="submit"]:focus {
+    background-color: #0056b3; /* Couleur légèrement plus foncée au survol */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour l'effet de survol */
 }
 
+/* Style global de la navbar */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    font-size: 24px;
-    padding: 10px 0px;
+    background-color: #34495e; /* Une couleur de fond plus profonde et stylée */
+    color: #ffffff;
+    font-size: 20px; /* Augmentation de la taille de la police pour plus de visibilité */
+    padding: 20px 30px; /* Plus de padding pour une barre de navigation plus grande et plus confortable */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour un effet de profondeur */
+    font-family: 'Roboto', sans-serif; /* Maintien d'une police moderne */
 }
 
-
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin-left: -50%;
-}
-
-.navbar ul li {
-    display: inline;
-   margin-right: 20px;
- 
-}
-
-.navbar ul li a {
+/* Style des liens dans la navbar */
+.navbar a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-   
+    font-weight: 600; /* Un poids plus fort pour un aspect plus audacieux */
+    padding: 10px 15px; /* Plus de padding autour des liens pour une meilleure accessibilité */
+    transition: color 0.3s, background-color 0.3s; /* Transition pour les effets de survol */
+    border-radius: 4px; /* Coins légèrement arrondis pour les liens */
 }
-.navbar ul li a:hover {
-    color: gray;
+
+/* Effet de survol pour les liens */
+.navbar a:hover {
+    color: #34495e; /* Changement de couleur pour l'interaction */
+    background-color: #18bc9c; /* Arrière-plan contrasté lors du survol */
 }
-.footer {
-    background-color: #333;
-    color: #fff;
+
+/* Logo */
+.navbar .logo img {
+    height: 80px; /* Augmentation de la taille du logo */
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Liste de navigation */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+/* Eléments alignés à droite */
+.navbar .ml-auto {
+    margin-left: auto;
+}
+
+/* Centrage de certains éléments si nécessaire */
+.navbar .centered {
+    margin: auto;
+}
+
+/* Style supplémentaire pour une navbar avec ombre */
+.navbar.shadow {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+
+footer {
+    background-color: #34495e;
+    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-top: 4px solid #18bc9c;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
+
+footer a {
+    color: #f8f9fa; /* Couleur des liens dans le footer */
+    text-decoration: none; /* Pas de soulignement pour les liens */
+    transition: color 0.3s ease; /* Transition pour les effets de survol */
+}
+
+footer a:hover {
+    color: #18bc9c; /* Changement de couleur lors du survol */
+}
+
+/* Ajoutez ici d'autres styles pour les éléments spécifiques du footer */
+
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée pour un effet moderne */
+    font-family: 'Roboto', sans-serif; /* Police plus moderne */
+    border-radius: 8px; /* Coins arrondis pour un look actuel */
+    overflow: hidden; /* Cache les bordures internes dans les coins arrondis */
+    background-color: #ffffff; /* Fond blanc pour plus de contraste */
 }
 
 th, td {
-    border: 3px solid #dddddd;
     text-align: left;
-    padding: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #dddddd; /* Bordure plus subtile pour séparer les lignes */
 }
 
 th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+    background-color: #34495e; /* Couleur d'en-tête plus moderne et élégante */
+    color: #ffffff;
+    font-weight: 500; /* Poids de police modéré */
 }
 
+/* Style pour les lignes de table en alternance pour améliorer la lisibilité */
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f8f9fa;
 }
 
+/* Style pour les lignes au survol pour une meilleure interactivité */
 tr:hover {
-    background-color: #ddd;
+    background-color: #e9ecef;
 }
+
+
 
 
 .hero {
-    background-color: #f5f5f5;
+    background-color: #eef2f7; /* Couleur de fond plus douce et moderne */
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0; /* Plus de padding pour un impact visuel plus fort */
 }
 
 .hero h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 40px; /* Taille de police légèrement augmentée */
+    color: #2c3e50; /* Couleur de texte plus profonde */
+    font-family: 'Poppins', sans-serif; /* Police moderne */
+    margin-bottom: 30px;
+    font-weight: 600; /* Poids de la police pour l'importance */
 }
 
 .hero p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 20px;
+    color: #4a4e69; /* Couleur de texte mise à jour */
+    margin-bottom: 50px; /* Plus de marge pour une meilleure séparation */
+    font-family: 'Roboto', sans-serif;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-}
 
-.cta-button:hover {
-    background-color: #555;
-}
 
 .features {
     text-align: center;
     padding: 80px 0;
 }
 
-.features h2 {
-    font-size: 24px;
-    color: #333;
+.features  {
+    font-size: 28px;
+    color: #1a1a1a;
     margin-bottom: 40px;
 }
 
 .feature {
     display: inline-block;
     width: 30%;
-    margin: 0 2%;
+    margin: 1% 2%;
     padding: 30px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
+    transition: transform 0.3s ease; /* Ajout d'une transition pour un effet visuel */
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Effet de mise à l'échelle au survol */
+}
+
+.feature h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
 }
 .logo {
     display: flex;
@@ -189,77 +318,79 @@ tr:hover {
    margin-left:  120%;
 }
 
-.logo img {
-    height: 110px;
-    width: 180px; /* Ajustez la hauteur du logo selon vos besoins */
+
+
+
+/* Style pour le message d'étape sur la page d'accueil */
+/* Style amélioré pour le message d'étape sur la page d'accueil */
+.message-container {
+    background-color: #2c3e50; /* Couleur de fond mise à jour pour un bleu plus profond et moderne */
+    color: #ffffff;
+    border-radius: 10px; /* Bordures plus arrondies pour un look actuel */
+    padding: 25px; /* Augmentation du padding pour un espace plus généreux */
+    margin-bottom: 30px; /* Espace supplémentaire en dessous */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée pour un effet 3D subtil */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
 }
 
-.result-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
+.message-container p {
+    margin: 15px 0; /* Espacement ajusté pour une meilleure structure */
+    font-size: 20px; /* Taille de police légèrement augmentée */
+    line-height: 1.8; /* Interligne augmenté pour une meilleure lisibilité */
 }
 
-.result-list {
-    list-style: none;
-    padding: 0;
+.message-container p:first-child {
+    font-size: 26px; /* Taille de police plus grande pour le premier paragraphe */
+    font-weight: 600; /* Poids de la police modéré */
+    color: #18bc9c; /* Couleur accentuée pour le premier paragraphe pour attirer l'attention */
 }
 
-.result-list li {
-    margin-bottom: 10px;
+
+/* Ajoutez plus de styles selon vos préférences */
+
+.bienvenue-message {
+    position:  absolute; /* Positionnement fixe sur la page */
+    top: 10px; /* Espacement depuis le haut de la page */
+    right: 10px; /* Espacement depuis le côté droit de la page */
+    background-color: #f8f9fa; /* Couleur de fond légère */
+    padding: 10px; /* Padding autour du texte pour l'esthétique */
+    border-radius: 5px; /* Coins arrondis pour un look moderne */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+    z-index: 1000; /* Assure que le message reste au-dessus des autres éléments */
+    font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
 }
 
-.no-result {
-    color: #ff0000;
+.bienvenue-message h2 {
+    margin: 0; /* Supprime la marge par défaut de h2 */
+    color: #333; /* Couleur de texte foncée pour un bon contraste */
+    font-size: 16px; /* Taille de police adaptée */
+}
+body {
+    display: flex; /* Utilise flexbox pour la mise en page */
+    flex-direction: column; /* Empile les éléments verticalement */
+    min-height: 100vh; /* Hauteur minimale de 100% de la fenêtre de visualisation */
+    margin: 0; /* Supprime les marges par défaut */
 }
 
-select {
-    width: 100%;
-    padding: 10px;
+html {
+    height: 100%; /* Assure que la hauteur de l'élément html est de 100% */
+}
+
+.header-section {
+    margin-bottom: 20px;
+}
+.header-section select {
+    padding: 5px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    color: #333;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.3s;
 }
-
-/* Style pour les options de la liste déroulante */
-select option {
-    background-color: white;
-    color: #333;
+.header-section h1 {
+    margin: 0;
 }
-
-/* Style au survol de la liste déroulante */
-select:hover {
-    border-color: #555;
+.flex-container {
+    display: flex;
+    justify-content: space-between;
 }
-
-/* Style au focus de la liste déroulante */
-select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+.flex-container > div {
+    width: 49%;
 }
-.result-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-}
-
-.result-list {
-    list-style: none;
-    padding: 0;
-}
-
-.result-list li {
-    margin-bottom: 10px;
-}
-
-.no-result {
-    color: #ff0000;
-}
-

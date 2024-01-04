@@ -19,15 +19,15 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
 
 <body>
 <nav class="navbar">
-        <div class="container">
+        <div class="container1">
             <h1>Logiciel Budgétaire</h1>
             <div class="logo">
             <a href="https://www.cotedor.fr/">  <img src="logo.png" alt="Logo" ></a>
             </div>
             <ul>
             <li><a href="acceuil.php">Accueil</a></li>
-                <li><a href="form.php">Recherche d'Opération</a></li>
-                <li><a href="#">Mes demandes</a></li>
+                <li><a href="tab2.php">Recherche d'Opération</a></li>
+                <li><a href="demandes.php">Mes demandes</a></li>
                 <li><a href="profile.php">Profil</a></li>
                 <li><a href="logout.php">Déconnexion</a></li>
             </ul>
@@ -37,9 +37,9 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
 
     </nav>
     <section class="hero">
-        <div class="container">
+        
         <h1>Bienvenue, <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom']; ?></h1>
-        </div>
+        
     </section>
     <div class="container">
       
@@ -60,15 +60,20 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['nom']) || !isset($_SESSION['
                 <th>Direction</th>
                 <td><?php echo $_SESSION['direction']; ?></td>
             </tr>
+            <tr>
+                <th>Role</th>
+                <td><?php echo $_SESSION['role']; ?></td>
+            </tr>
           
 
         </table>
     </div>
     <footer class="footer">
-        <div class="container">
+       
             <p>&copy; 2023 Conseil Départemental de la cote d'or. Tous droits réservés.</p>
-        </div>
+        
     </footer>
+
 </body>
 
 </html>

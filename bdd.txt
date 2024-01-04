@@ -39,3 +39,16 @@ CREATE TABLE utilisateurs (
 INSERT INTO utilisateurs (email, mot_de_passe, numero_direction) VALUES ('utilisateur@example.com', 'motdepasse123', '01');
 //////////////////////////Gen USER md5/////////////////////////
 INSERT INTO utilisateurs (email, mot_de_passe, numero_direction,nom,prenom) VALUES ('test', MD5('motdepasse'), '01','nom','prenom');
+ 
+
+///////////////////////AGENT///////////////////////////////////////
+INSERT INTO utilisateurs (email, mot_de_passe, numero_direction, nom, prenom, role)
+VALUES ('agent.finnance@cotedor.fr', 'agent123', '523', 'Finnance', 'Agent', 'agent');
+
+
+//////////////////////ADMIN///////////////////////////////////////////
+INSERT INTO utilisateurs (email, mot_de_passe, numero_direction, nom, prenom, role)
+VALUES ('asni.mehdi@cotedor.fr', 'admin123', '531', 'Asni', 'Mehdi', 'admin');
+
+///////////////////////////////////////////////////////////////////////////////
+$sql = "SELECT nom_etape, date_debut, date_fin FROM etape WHERE CURDATE() BETWEEN date_debut AND date_fin";
